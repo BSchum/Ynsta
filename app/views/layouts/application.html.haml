@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Ynsta
+    = csrf_meta_tags
+    %link{:href => "https://fonts.googleapis.com/css?family=Dosis", :rel => "stylesheet"}/
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body{:class => "#{params[:controller]}"}
+    .header
+      = render partial: '/shared/header'
+    .container.content
+      = yield

@@ -1,0 +1,28 @@
+
+%h2= "Nouveau post"
+- if @posts.errors.any?
+  .row
+    .col-xs-8.col-xs-offset-2.errors
+      %h2
+        = pluralize(@posts.errors.count, "error")
+        = t('errors', count: @listing.errors.count)
+      %ul
+        - @posts.errors.full_messages.each do |msg|
+          %li= msg
+
+= form_for @posts, class: 'form', html: {multipart: true} do |f|
+  .form-group
+    = f.label :category_id, class: 'form-label required'
+    = f.collection_select :category_id, Category.all, :id, :name, {}, {class: 'form-control'}
+  .form_group
+    - Tag.all.each do |tag| 
+      = f.label tag.name
+      = check_box_tag "post[tag_ids][]", tag.id, @posts.tags.include?(tag) 
+  .form-group
+    = f.label :picture, class: 'form-label required'
+    = f.file_field :picture, {class: 'form-control'}
+  .form-group
+    =f.label :description, class:'form-label required'
+    =f.text_area :description, class:'form-control'
+  .form-group
+    =f.submit "Poster", class: 'btn-btn-primary'

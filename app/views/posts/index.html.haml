@@ -1,0 +1,17 @@
+.row
+  - @posts.each do |post|
+    .card
+      .imgpost
+        %a{href: post_path(post)}
+          - begin
+            = image_tag post.picture, class: 'img_responsive card-img-top'
+          - rescue
+            = "No image"
+      .card-block
+        .card-title
+          %strong= post.user.fullname
+        .card-text
+          %p= post.description
+        %div.badge.badge-primary= post.category.name
+        - post.tags.each do |tag|
+          %div.badge.badge-default= tag.name
