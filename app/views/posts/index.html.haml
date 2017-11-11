@@ -1,17 +1,36 @@
-.row
-  - @posts.each do |post|
-    .card
-      .imgpost
-        %a{href: post_path(post)}
-          - begin
-            = image_tag post.picture, class: 'img_responsive card-img-top'
-          - rescue
-            = "No image"
-      .card-block
-        .card-title
-          %strong= post.user.fullname
-        .card-text
-          %p= post.description
-        %div.badge.badge-primary= post.category.name
-        - post.tags.each do |tag|
-          %div.badge.badge-default= tag.name
+.row.infinitescroll
+  - if @posts
+    - @posts.each do |post|
+      .card
+        .imgpost
+          %a{href: post_path(post)}
+            - begin
+              = image_tag post.picture, class: 'img_responsive card-img-top'
+            - rescue
+              = "No image"
+        .card-block
+          .card-title
+            %a{href: root_path+"user/"+post.user.slug}= post.user.fullname
+          .card-text
+            %p= post.description
+          %a.badge.badge-primary{href: "/categories/"+post.category.id.to_s}= post.category.name
+          - post.tags.each do |tag|
+            %a.badge.badge-default{href: "/tags/"+tag.id.to_s}= tag.name
+          - if current_user
+            %a{href: '#', class: "like #{'active' if current_user.voted_for? post}", data: {do: 'like', id: post.id}}
+          - else
+            = link_to image_tag("nolike.png"), new_user_session_path  
+          .col-md-2{class: "NbLike", data: {nbr: post.id}}
+            = post.get_likes.size
+    %div.row.loading
+      %div= "Veuillez patienter"
+      %div= image_tag "loading.gif"
+- if !@posts
+  = render 'shared/noresult'
+:javascript
+  if("#{@posts.last}" != "#{nil}"){
+    window.lastid = '#{@posts.last.try(:id)}';
+  } else{
+    window.lastid = 0;
+  }   
+

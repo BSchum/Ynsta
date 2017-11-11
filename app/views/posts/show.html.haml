@@ -1,0 +1,21 @@
+.row
+  .card.centercard
+    .col-10.card-img-top.imgposts
+      - begin 
+        = image_tag @posts.picture, class:'img_responsive'
+      - rescue
+        = "No image"
+    .card-block
+      .card-title
+        %strong= @posts.user.fullname
+      .card-text
+        = @posts.description
+      %a.badge.badge-primary{href: "/categories/"+@posts.category.id.to_s}= @posts.category.name
+      - @posts.tags.each do |tag|
+        %a.badge.badge-default{href: "/tags/"+tag.id.to_s}= tag.name
+      - if current_user
+        %a{href: '#', class: "like #{'active' if current_user.voted_for? @posts}", data: {do: 'like', id: @posts.id}}
+      - else
+        = link_to image_tag("nolike.png"), new_user_session_path  
+      .col-md-2{class: "NbLike", data: {nbr: @posts.id}}
+        = @posts.get_likes.size

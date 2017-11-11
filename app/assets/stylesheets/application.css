@@ -16,6 +16,14 @@
 
 .imgpost a img{
     height: 200px;
+    overflow: hidden;
+}
+.imgposts{
+    width: 800px;
+    overflow: hidden;
+}
+.imgpost{
+    padding: 0;
 }
 .tag{
     float:left;
@@ -24,4 +32,60 @@
 .card{
     margin-left:10px;
     margin-top: 10px;
+}
+.loading img{
+    width: 30px;
+}
+.loading{
+    visibility: hidden;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50px;
+}
+.center-text{
+    margin: auto;
+    width: 20px;
+}
+.categories{
+    color:white;
+    text-decoration: none;
+    margin-right:5px;
+}
+.categories:hover{
+    text-decoration: none;
+    color: grey;
+}
+#active{
+    border-bottom: 2px solid white;
+}
+
+.center{
+    text-align: center;
+}
+.buttonsearch{
+    margin-left:5px;
+}
+.searchnav{
+    margin-right:10px;
+}
+.like svg:hover{
+    fill:red;
+}
+.centercard{
+    margin: auto;
+    width: 800px;
+}
+.like{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("nolike.png");
+}
+
+.active
+{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("like.png");
 }

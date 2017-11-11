@@ -1,3 +1,20 @@
 %nav.navbar.navbar-inverse.bg-inverse
-    %a.navbar-brand{href: root_path}="Ynsta"
-
+  .row
+    %a.navbar-brand{href: root_path}
+      ="Ynsta"
+    - if current_user
+      %a{href: destroy_user_session_path, class:'center-text pull-right col-1', 'data-method' => 'delete'}
+        ="Log out"
+    - else 
+      %a{href: new_user_session_path, class:'center-text pull-right col-1'}
+        ="Log in"
+    .col.center-text
+      - Category.all.each do |category|
+        %a{href: categories_index_path(category.id), 
+           class:'center-text pull-right categories',
+           :id => active_class(categories_index_path(category.id))}
+          = category.name
+    %a.btn.btn-secondary{href: new_post_path}= "Uploader une image"
+    %form.form-inline.searchnav{:action => "/search", :method => "GET"}
+      %input.form-control.mr-sm-2{:placeholder => "Search", :type => "text", :name => "string"}/
+      %button.btn.btn-secondary.my-2.my-sm-0{:type => "submit"} Search

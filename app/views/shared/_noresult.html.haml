@@ -1,0 +1,4 @@
+%h2.center= "Pas de résultat pour votre recherche"
+%form.form-inline.row{:action => "/search", :method => "GET"}
+  %input.form-control.col-10{:placeholder => "Search", :type => "text", :name => "string"}/
+  %button.btn.btn-secondary.col-1.buttonsearch{:type => "submit"} Search
