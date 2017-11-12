@@ -1,0 +1,20 @@
+one:
+  id: 1
+  user_id: 1
+  description: 'description 1'
+  category_id: 1
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+two:
+  id: 2
+  user_id: 1
+  description: 'description 2'
+  category_id: 2
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+three:
+  id: 3
+  user_id: 123
+  description: 'test'
+  category_id: 1
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
