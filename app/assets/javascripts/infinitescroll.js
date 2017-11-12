@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function () {
                     console.log("visible");
                     console.log(window.lastid); 
                     $.ajax({
-                        url: '/posts',
+                        url: window.location.href,
                         type: 'GET',
                         dataType: 'html',
                         data: 'offset='+window.lastid,
