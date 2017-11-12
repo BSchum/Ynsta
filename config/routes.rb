@@ -10,6 +10,5 @@ Rails.application.routes.draw do
   get '/tags/:tag_id', to: 'posts#index'
   get '/user/:slug', to: 'posts#index'
   get '/search', to: 'posts#index'  
-  get '/users', to: 'posts#index'
 
 end

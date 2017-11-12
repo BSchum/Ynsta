@@ -6,7 +6,7 @@ class Post < ApplicationRecord
     has_many :post_tags
     has_many :tags, through: :post_tags
 
-    def self.search(args,uri)
+    def self.search(args)
       if args[:category_id] 
         out = Post.where(["category_id = ?", args[:category_id]])
       elsif args[:tag_id]

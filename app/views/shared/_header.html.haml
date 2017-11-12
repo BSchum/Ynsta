@@ -5,9 +5,11 @@
     - if current_user
       %a{href: destroy_user_session_path, class:'center-text pull-right col-1', 'data-method' => 'delete'}
         ="Log out"
+      %a{href: "/user/"+current_user.id.to_s, class:'center-text col-1 pull-right'}= "MyPosts"
     - else 
       %a{href: new_user_session_path, class:'center-text pull-right col-1'}
         ="Log in"
+
     .col.center-text
       - Category.all.each do |category|
         %a{href: categories_index_path(category.id), 
