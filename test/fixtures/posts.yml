@@ -18,3 +18,150 @@ three:
   description: 'test'
   category_id: 1
   picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+four:
+  id: 4
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+five:
+  id: 5
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+six:
+  id: 6
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+seven:
+  id: 7
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+eight:
+  id: 8
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+nine:
+  id: 9
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+ten:
+  id: 10
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+eleven:
+  id: 11
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twelve:
+  id: 12
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+thirteen:
+  id: 13
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+fourteen:
+  id: 14
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+fifteen:
+  id: 15
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+sixteen:
+  id: 16
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+seventeen:
+  id: 17
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+eighteen:
+  id: 18
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+nineteen:
+  id: 19
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twenty:
+  id: 20
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twenty-one:
+  id: 21
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twenty-two:
+  id: 22
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twenty-three:
+  id: 23
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")
+
+twenty-four:
+  id: 24
+  user_id: 150
+  description: 'description test'
+  category_id: 150
+  picture: File.open("#{Rails.root}/test/fixtures/files/avatar.png")

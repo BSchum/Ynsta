@@ -26,9 +26,15 @@ describe Post do
     assert_equal "test", posts.first.description
   end
 
-  it "returns all posts if keyword doesn't exist" do
+  it "returns 12 posts if keyword doesn't exist" do
     posts = Post.search(nothing: "not")
-    assert_equal 3, posts.length
+    assert_equal 12, posts.length
+  end
+
+  it "returns 12 posts from the twelfth if keyword is offset" do
+    posts = Post.search(offset: 12)
+    assert_equal 12, posts.length
+    assert_equal "description test", posts.first.description
   end
 
 end
