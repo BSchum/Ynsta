@@ -14,12 +14,12 @@ class Post < ApplicationRecord
       elsif args[:slug]
         out = Post.where(["user_id = ?", args[:slug].to_i])
       elsif args[:string]
-        out = Post.joins(:user, :category).where(["description LIKE ? 
-                                                   OR users.firstname LIKE ?
-                                                   OR users.lastname  LIKE ?",
-                                                   "%#{args[:string]}%",
-                                                   "%#{args[:string]}%",
-                                                   "%#{args[:string]}%"])
+        out = Post.joins(:user).where(["description LIKE ? 
+                                        OR users.firstname LIKE ?
+                                        OR users.lastname  LIKE ?",
+                                        "%#{args[:string]}%",
+                                        "%#{args[:string]}%",
+                                        "%#{args[:string]}%"])
       else
         out = Post.all
       end

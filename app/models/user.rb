@@ -8,9 +8,11 @@ class User < ApplicationRecord
   def is_admin?
     true
   end
+
   def fullname
     "#{firstname} #{lastname}"
   end
+  
   def slug
     "#{id}-#{firstname}"
   end
